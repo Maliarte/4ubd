@@ -1,4 +1,4 @@
-# 🚀 Instruções para a Criação da Workspace "Empresa" no Oracle APEX
+# Criação do Workspace "Empresa" no Oracle APEX
 
 ## Passo a Passo
 
