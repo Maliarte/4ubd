@@ -1,0 +1,89 @@
+Passo 1: Criar um novo workspace
+
+1. Acesse o Oracle APEX e faça login com suas credenciais.
+2. Clique em "Criar um novo workspace".
+3. Preencha as informações solicitadas:
+    - Nome do workspace: "Cadastro de Carros"
+    - Nome do esquema: "CADASTRO_CARROS"
+    - Senha do esquema: "sua_senha"
+4. Clique em "Criar".
+
+Passo 2: Criar as tabelas
+
+1. No workspace "Cadastro de Carros", clique em "Objetos" > "Tabelas".
+2. Clique em "Criar tabela".
+3. Crie as seguintes tabelas:
+
+Tabela: CARROS
+
+| Coluna | Tipo          | Descrição       |
+| ---    | ---           | ---             |
+| ID     | NUMBER        | Chave primária  |
+| MARCA  | VARCHAR2(50)  | Marca do carro  |
+| MODELO | VARCHAR2(100) | Modelo do carro |
+| ANO    | NUMBER        | Ano do carro    |
+| COR    | VARCHAR2(20)  | Cor do carro    |
+
+Tabela: CATEGORIAS
+
+| Coluna | Tipo         | Descrição         |
+| ---    | ---          | ---               |
+| ID     | NUMBER       | Chave primária    |
+| NOME   | VARCHAR2(50) | Nome da categoria |
+
+Tabela: CARROS_CATEGORIAS
+
+| Coluna       | Tipo   | Descrição                         |
+| ---          | ---    | ---                               |
+| ID_CARRO     | NUMBER | Chave estrangeira para CARROS     |
+| ID_CATEGORIA | NUMBER | Chave estrangeira para CATEGORIAS |
+
+1. Clique em "Criar" para criar cada tabela.
+
+Passo 3: Criar a aplicação
+
+1. No workspace "Cadastro de Carros", clique em "Aplicativos" > "Criar aplicativo".
+2. Selecione "Aplicativo de página única" e clique em "Próximo".
+3. Preencha as informações solicitadas:
+    - Nome do aplicativo: "Cadastro de Carros"
+    - Título do aplicativo: "Cadastro de Carros"
+4. Clique em "Criar".
+
+Passo 4: Criar páginas
+
+1. No aplicativo "Cadastro de Carros", clique em "Páginas" > "Criar página".
+2. Crie as seguintes páginas:
+
+Página: Carros
+
+- Tipo: Formulário
+- Tabela: CARROS
+- Colunas: ID, MARCA, MODELO, ANO, COR
+
+Página: Categorias
+
+- Tipo: Formulário
+- Tabela: CATEGORIAS
+- Colunas: ID, NOME
+
+Página: Carros por Categoria
+
+- Tipo: Relatório
+- Tabela: CARROS_CATEGORIAS
+- Colunas: ID_CARRO, ID_CATEGORIA
+
+1. Clique em "Criar" para criar cada página.
+
+Passo 5: Configurar a navegação
+
+1. No aplicativo "Cadastro de Carros", clique em "Navegação" > "Menu".
+2. Crie um menu com as seguintes opções:
+    - Carros
+    - Categorias
+    - Carros por Categoria
+3. Clique em "Salvar".
+
+Passo 6: Testar a aplicação
+
+1. No aplicativo "Cadastro de Carros", clique em "Executar".
+2. Teste as páginas e funcionalidades.
